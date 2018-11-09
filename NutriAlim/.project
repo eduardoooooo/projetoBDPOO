@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>NutriAlim</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/Alimentos.java</name>
+			<type>1</type>
+			<location>G:/NutriAlimentos/src/Alimentos.java</location>
+		</link>
+		<link>
+			<name>src/Avaliação.java</name>
+			<type>1</type>
+			<location>G:/NutriAlimentos/src/Avaliação.java</location>
+		</link>
+		<link>
+			<name>src/Come.java</name>
+			<type>1</type>
+			<location>G:/NutriAlimentos/src/Come.java</location>
+		</link>
+		<link>
+			<name>src/Meta.java</name>
+			<type>1</type>
+			<location>G:/NutriAlimentos/src/Meta.java</location>
+		</link>
+		<link>
+			<name>src/Pessoa.java</name>
+			<type>1</type>
+			<location>G:/NutriAlimentos/src/Pessoa.java</location>
+		</link>
+	</linkedResources>
+</projectDescription>
