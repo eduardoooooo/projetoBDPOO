@@ -20,31 +20,4 @@
 		<nature>org.eclipse.m2e.core.maven2Nature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>src/Alimentos.java</name>
-			<type>1</type>
-			<location>G:/NutriAlimentos/src/Alimentos.java</location>
-		</link>
-		<link>
-			<name>src/Avaliação.java</name>
-			<type>1</type>
-			<location>G:/NutriAlimentos/src/Avaliação.java</location>
-		</link>
-		<link>
-			<name>src/Comer.java</name>
-			<type>1</type>
-			<location>G:/NutriAlimentos/src/Come.java</location>
-		</link>
-		<link>
-			<name>src/Meta.java</name>
-			<type>1</type>
-			<location>G:/NutriAlimentos/src/Meta.java</location>
-		</link>
-		<link>
-			<name>src/Pessoa.java</name>
-			<type>1</type>
-			<location>G:/NutriAlimentos/src/Pessoa.java</location>
-		</link>
-	</linkedResources>
 </projectDescription>
