@@ -11,7 +11,7 @@ public class Avaliação {
 	
 	@Id
 	@GeneratedValue
-	private int idKal;
+	private Long idKal;
 	private Integer caloriasGastas;
 	private Integer eer;
 	private Integer imc;
@@ -28,7 +28,7 @@ public class Avaliação {
 		int result = 1;
 		result = prime * result + ((caloriasGastas == null) ? 0 : caloriasGastas.hashCode());
 		result = prime * result + ((eer == null) ? 0 : eer.hashCode());
-		result = prime * result + idKal;
+		result = (int) (prime * result + idKal);
 		result = prime * result + ((imc == null) ? 0 : imc.hashCode());
 		return result;
 	}
@@ -64,12 +64,14 @@ public class Avaliação {
 	}
 
 
-	public int getIdKal() {
+
+
+	public Long getIdKal() {
 		return idKal;
 	}
 
 
-	public void setIdKal(int idKal) {
+	public void setIdKal(Long idKal) {
 		this.idKal = idKal;
 	}
 

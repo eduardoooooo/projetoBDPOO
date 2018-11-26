@@ -8,7 +8,7 @@ import javax.persistence.OneToMany;
 @Entity
 public class Pessoa  {
 	@Id
-	private int id_n;
+	private Long id_n;
 	private String nome;
 	private Integer altura;
 	private Integer peso;
@@ -18,22 +18,25 @@ public class Pessoa  {
 	
 	public Pessoa(int id_n, String nome, Integer altura, Integer peso, ArrayList<Meta> metas) {
 		super();
-		this.id_n = id_n;
+		this.id_n = (long) id_n;
 		this.nome = nome;
 		this.altura = altura;
 		this.peso = peso;
 		this.metas = metas;
+	}
+	public Pessoa() {
+		// TODO Auto-generated constructor stub
 	}
 	@Override
 	public String toString() {
 		return "Pessoa [id_n=" + id_n + ", nome=" + nome + ", altura=" + altura + ", peso=" + peso + ", metas=" + metas
 				+ "]";
 	}
-	public int getId_n() {
+	public long getId_n() {
 		return id_n;
 	}
-	public void setId_n(int id_n) {
-		this.id_n = id_n;
+	public void setId_n(long l) {
+		this.id_n = (long) l;
 	}
 	public String getNome() {
 		return nome;
@@ -64,7 +67,7 @@ public class Pessoa  {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result + ((altura == null) ? 0 : altura.hashCode());
-		result = prime * result + id_n;
+		result = prime * result + ((id_n == null) ? 0 : id_n.hashCode());
 		result = prime * result + ((metas == null) ? 0 : metas.hashCode());
 		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
 		result = prime * result + ((peso == null) ? 0 : peso.hashCode());
@@ -84,7 +87,10 @@ public class Pessoa  {
 				return false;
 		} else if (!altura.equals(other.altura))
 			return false;
-		if (id_n != other.id_n)
+		if (id_n == null) {
+			if (other.id_n != null)
+				return false;
+		} else if (!id_n.equals(other.id_n))
 			return false;
 		if (metas == null) {
 			if (other.metas != null)
@@ -103,7 +109,6 @@ public class Pessoa  {
 			return false;
 		return true;
 	}
-	 
-	
+
 
 }

@@ -5,22 +5,22 @@ import javax.persistence.Id;
 @Entity
 public class Comer {
 	@Id
-	private int id_hr;
+	private Long id_hr;
 	private Integer data_hora;
 	private ArrayList<Pessoa>pessoas;
 	private ArrayList<Alimentos>alimento;
 	public Comer(int id_hr, Integer data_hora, ArrayList<Pessoa> pessoas, ArrayList<Alimentos> alimento) {
 		super();
-		this.id_hr = id_hr;
+		this.id_hr = (long) id_hr;
 		this.data_hora = data_hora;
 		this.pessoas = pessoas;
 		this.alimento = alimento;
 	}
-	public int getId_hr() {
+	public Long getId_hr() {
 		return id_hr;
 	}
 	public void setId_hr(int id_hr) {
-		this.id_hr = id_hr;
+		this.id_hr = (long) id_hr;
 	}
 	public Integer getData_hora() {
 		return data_hora;
@@ -51,7 +51,7 @@ public class Comer {
 		int result = 1;
 		result = prime * result + ((alimento == null) ? 0 : alimento.hashCode());
 		result = prime * result + ((data_hora == null) ? 0 : data_hora.hashCode());
-		result = prime * result + id_hr;
+		result = (int) (prime * result + id_hr);
 		result = prime * result + ((pessoas == null) ? 0 : pessoas.hashCode());
 		return result;
 	}
