@@ -1,8 +1,8 @@
-import java.util.ArrayList;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -15,18 +15,12 @@ public class Avaliação {
 	private Integer caloriasGastas;
 	private Integer eer;
 	private Integer imc;
-	private ArrayList<Pessoa>pessoas;
+	
+	@ManyToOne
+	@JoinColumn(name="id_pessoa")
+	private Pessoa pessoa;
 	
 	
-	public Avaliação(Integer idKal, Integer caloriasGastas, Integer eer, Integer imc, ArrayList<Pessoa> pessoas) {
-		super();
-		this.idKal = idKal;
-		this.caloriasGastas = caloriasGastas;
-		this.eer = eer;
-		this.imc = imc;
-		this.pessoas = pessoas;
-	}
-
 
 	@Override
 	public int hashCode() {
@@ -36,7 +30,6 @@ public class Avaliação {
 		result = prime * result + ((eer == null) ? 0 : eer.hashCode());
 		result = prime * result + idKal;
 		result = prime * result + ((imc == null) ? 0 : imc.hashCode());
-		result = prime * result + ((pessoas == null) ? 0 : pessoas.hashCode());
 		return result;
 	}
 
@@ -66,11 +59,6 @@ public class Avaliação {
 			if (other.imc != null)
 				return false;
 		} else if (!imc.equals(other.imc))
-			return false;
-		if (pessoas == null) {
-			if (other.pessoas != null)
-				return false;
-		} else if (!pessoas.equals(other.pessoas))
 			return false;
 		return true;
 	}
@@ -116,30 +104,19 @@ public class Avaliação {
 	}
 
 
-	public ArrayList<Pessoa> getPessoas() {
-		return pessoas;
+	public Pessoa getPessoa() {
+		return pessoa;
 	}
 
 
-	public void setPessoas(ArrayList<Pessoa> pessoas) {
-		this.pessoas = pessoas;
-	}
-
-
-	public Avaliação(int idKal, Integer caloriasGastas, Integer eer, Integer imc, ArrayList<Pessoa> pessoas) {
-		super();
-		this.idKal = idKal;
-		this.caloriasGastas = caloriasGastas;
-		this.eer = eer;
-		this.imc = imc;
-		this.pessoas = pessoas;
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
 	}
 
 
 	@Override
 	public String toString() {
-		return "Avaliação [idKal=" + idKal + ", caloriasGastas=" + caloriasGastas + ", eer=" + eer + ", imc=" + imc
-				+ ", pessoas=" + pessoas + "]";
+		return "Avaliação [idKal=" + idKal + ", caloriasGastas=" + caloriasGastas + ", eer=" + eer + ", imc=" + imc + "]";
 	}
 
 }

@@ -1,5 +1,10 @@
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class Alimentos {
@@ -14,6 +19,12 @@ public class Alimentos {
 	private Integer lipidios;
 	private Integer gosrdurasSaturadas;
 	private Integer gorduras;
+	
+	
+	@ManyToMany
+	@JoinTable(name="alimento_pessoa", joinColumns = @JoinColumn(name="alimento_id"), inverseJoinColumns=@JoinColumn(name="pessoa_id"))
+	private Set<Pessoa> pessoas; 
+	
 	public Alimentos(int id_vlr, Integer valorEnergetico, Integer proteinas, Integer saisMinerais, String nome,
 			Integer carboidratos, Integer vitaminas, Integer lipidios, Integer gosrdurasSaturadas, Integer gorduras) {
 		super();

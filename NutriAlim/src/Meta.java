@@ -1,5 +1,7 @@
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 @Entity
 public class Meta {
@@ -7,6 +9,11 @@ public class Meta {
 	private int id_met;
 	private String descricao;
 	private String objetivoPrinc;
+	
+	@ManyToOne
+	@JoinColumn(name="id_pessoa")
+	private Pessoa pessoa;
+	
 	public Meta(int id_met, String descricao, String objetivoPrinc) {
 		super();
 		this.id_met = id_met;

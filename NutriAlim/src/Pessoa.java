@@ -2,6 +2,8 @@ import java.util.ArrayList;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Pessoa  {
@@ -10,7 +12,10 @@ public class Pessoa  {
 	private String nome;
 	private Integer altura;
 	private Integer peso;
-	private ArrayList<Meta>metas;
+	
+	@OneToMany(mappedBy="pessoa")
+	private ArrayList<Meta> metas;
+	
 	public Pessoa(int id_n, String nome, Integer altura, Integer peso, ArrayList<Meta> metas) {
 		super();
 		this.id_n = id_n;
