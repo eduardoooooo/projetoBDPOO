@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Set;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -6,7 +7,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 
 @Entity
-public class Pessoa  {
+public class Pessoa implements Indentificavel  {
 	@Id
 	private Long id_n;
 	private String nome;
@@ -14,9 +15,9 @@ public class Pessoa  {
 	private Integer peso;
 	
 	@OneToMany(mappedBy="pessoa")
-	private ArrayList<Meta> metas;
+	private Set<Meta> metas;
 	
-	public Pessoa(int id_n, String nome, Integer altura, Integer peso, ArrayList<Meta> metas) {
+	public Pessoa(int id_n, String nome, Integer altura, Integer peso, Set<Meta> metas) {
 		super();
 		this.id_n = (long) id_n;
 		this.nome = nome;
@@ -56,10 +57,10 @@ public class Pessoa  {
 	public void setPeso(Integer peso) {
 		this.peso = peso;
 	}
-	public ArrayList<Meta> getMetas() {
+	public Set<Meta> getMetas() {
 		return metas;
 	}
-	public void setMetas(ArrayList<Meta> metas) {
+	public void setMetas(Set<Meta> metas) {
 		this.metas = metas;
 	}
 	@Override
