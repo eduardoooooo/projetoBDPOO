@@ -19,12 +19,11 @@ public class Alimentos {
 	private Integer lipidios;
 	private Integer gosrdurasSaturadas;
 	private Integer gorduras;
-	
-	
+
 	@ManyToMany
-	@JoinTable(name="alimento_pessoa", joinColumns = @JoinColumn(name="alimento_id"), inverseJoinColumns=@JoinColumn(name="pessoa_id"))
-	private Set<Pessoa> pessoas; 
-	
+	@JoinTable(name = "alimento_pessoa", joinColumns = @JoinColumn(name = "alimento_id"), inverseJoinColumns = @JoinColumn(name = "pessoa_id"))
+	private Set<Pessoa> pessoas;
+
 	public Alimentos(int id_vlr, Integer valorEnergetico, Integer proteinas, Integer saisMinerais, String nome,
 			Integer carboidratos, Integer vitaminas, Integer lipidios, Integer gosrdurasSaturadas, Integer gorduras) {
 		super();
@@ -39,66 +38,87 @@ public class Alimentos {
 		this.gosrdurasSaturadas = gosrdurasSaturadas;
 		this.gorduras = gorduras;
 	}
+
 	public int getId_vlr() {
 		return id_vlr;
 	}
+
 	public void setId_vlr(int id_vlr) {
 		this.id_vlr = id_vlr;
 	}
+
 	public Integer getValorEnergetico() {
 		return valorEnergetico;
 	}
+
 	public void setValorEnergetico(Integer valorEnergetico) {
 		this.valorEnergetico = valorEnergetico;
 	}
+
 	public Integer getProteinas() {
 		return proteinas;
 	}
+
 	public void setProteinas(Integer proteinas) {
 		this.proteinas = proteinas;
 	}
+
 	public Integer getSaisMinerais() {
 		return saisMinerais;
 	}
+
 	public void setSaisMinerais(Integer saisMinerais) {
 		this.saisMinerais = saisMinerais;
 	}
+
 	public String getNome() {
 		return nome;
 	}
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+
 	public Integer getCarboidratos() {
 		return carboidratos;
 	}
+
 	public void setCarboidratos(Integer carboidratos) {
 		this.carboidratos = carboidratos;
 	}
+
 	public Integer getVitaminas() {
 		return vitaminas;
 	}
+
 	public void setVitaminas(Integer vitaminas) {
 		this.vitaminas = vitaminas;
 	}
+
 	public Integer getLipidios() {
 		return lipidios;
 	}
+
 	public void setLipidios(Integer lipidios) {
 		this.lipidios = lipidios;
 	}
+
 	public Integer getGosrdurasSaturadas() {
 		return gosrdurasSaturadas;
 	}
+
 	public void setGosrdurasSaturadas(Integer gosrdurasSaturadas) {
 		this.gosrdurasSaturadas = gosrdurasSaturadas;
 	}
+
 	public Integer getGorduras() {
 		return gorduras;
 	}
+
 	public void setGorduras(Integer gorduras) {
 		this.gorduras = gorduras;
 	}
+
 	@Override
 	public String toString() {
 		return "Alimentos [id_vlr=" + id_vlr + ", valorEnergetico=" + valorEnergetico + ", proteinas=" + proteinas
@@ -106,6 +126,7 @@ public class Alimentos {
 				+ ", vitaminas=" + vitaminas + ", lipidios=" + lipidios + ", gosrdurasSaturadas=" + gosrdurasSaturadas
 				+ ", gorduras=" + gorduras + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -122,6 +143,7 @@ public class Alimentos {
 		result = prime * result + ((vitaminas == null) ? 0 : vitaminas.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -180,7 +202,5 @@ public class Alimentos {
 			return false;
 		return true;
 	}
-	
-	
-	
+
 }

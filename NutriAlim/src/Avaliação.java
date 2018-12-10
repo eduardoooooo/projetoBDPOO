@@ -6,21 +6,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name ="AVALIAÇÕES")
+@Table(name = "AVALIAÇÕES")
 public class Avaliação {
-	
+
 	@Id
 	@GeneratedValue
 	private Long idKal;
 	private Integer caloriasGastas;
 	private Integer eer;
 	private Integer imc;
-	
+
 	@ManyToOne
-	@JoinColumn(name="id_pessoa")
+	@JoinColumn(name = "id_pessoa")
 	private Pessoa pessoa;
-	
-	
 
 	@Override
 	public int hashCode() {
@@ -32,7 +30,6 @@ public class Avaliação {
 		result = prime * result + ((imc == null) ? 0 : imc.hashCode());
 		return result;
 	}
-
 
 	@Override
 	public boolean equals(Object obj) {
@@ -63,63 +60,53 @@ public class Avaliação {
 		return true;
 	}
 
-
-
-
 	public Long getIdKal() {
 		return idKal;
 	}
-
 
 	public void setIdKal(Long idKal) {
 		this.idKal = idKal;
 	}
 
-
 	public Integer getCaloriasGastas() {
 		return caloriasGastas;
 	}
-
 
 	public void setCaloriasGastas(Integer caloriasGastas) {
 		this.caloriasGastas = caloriasGastas;
 	}
 
-
 	public Integer getEer() {
 		return eer;
 	}
-
 
 	public void setEer(Integer eer) {
 		this.eer = eer;
 	}
 
-
 	public Integer getImc() {
 		return imc;
 	}
-
 
 	public void setImc(Integer imc) {
 		this.imc = imc;
 	}
 
-
 	public Pessoa getPessoa() {
 		return pessoa;
 	}
-
 
 	public void setPessoa(Pessoa pessoa) {
 		this.pessoa = pessoa;
 	}
 
-
 	@Override
 	public String toString() {
-		return "Avaliação [idKal=" + idKal + ", caloriasGastas=" + caloriasGastas + ", eer=" + eer + ", imc=" + imc + "]";
+		return "Avaliação [idKal=" + idKal + ", caloriasGastas=" + caloriasGastas + ", eer=" + eer + ", imc=" + imc
+				+ "]";
 	}
 
-}
+
 	
+
+}

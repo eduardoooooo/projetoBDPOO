@@ -9,39 +9,47 @@ public class Meta {
 	private int id_met;
 	private String descricao;
 	private String objetivoPrinc;
-	
+
 	@ManyToOne
-	@JoinColumn(name="id_pessoa")
+	@JoinColumn(name = "id_pessoa")
 	private Pessoa pessoa;
-	
+
 	public Meta(int id_met, String descricao, String objetivoPrinc) {
 		super();
 		this.id_met = id_met;
 		this.descricao = descricao;
 		this.objetivoPrinc = objetivoPrinc;
 	}
+
 	public int getId_met() {
 		return id_met;
 	}
+
 	public void setId_met(int id_met) {
 		this.id_met = id_met;
 	}
+
 	public String getDescricao() {
 		return descricao;
 	}
+
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
 	}
+
 	public String getObjetivoPrinc() {
 		return objetivoPrinc;
 	}
+
 	public void setObjetivoPrinc(String objetivoPrinc) {
 		this.objetivoPrinc = objetivoPrinc;
 	}
+
 	@Override
 	public String toString() {
 		return "Meta [id_met=" + id_met + ", descricao=" + descricao + ", objetivoPrinc=" + objetivoPrinc + "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -51,6 +59,7 @@ public class Meta {
 		result = prime * result + ((objetivoPrinc == null) ? 0 : objetivoPrinc.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -74,5 +83,5 @@ public class Meta {
 			return false;
 		return true;
 	}
-	
+
 }

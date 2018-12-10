@@ -7,8 +7,9 @@ public class Comer {
 	@Id
 	private Long id_hr;
 	private Integer data_hora;
-	private ArrayList<Pessoa>pessoas;
-	private ArrayList<Alimentos>alimento;
+	private ArrayList<Pessoa> pessoas;
+	private ArrayList<Alimentos> alimento;
+
 	public Comer(int id_hr, Integer data_hora, ArrayList<Pessoa> pessoas, ArrayList<Alimentos> alimento) {
 		super();
 		this.id_hr = (long) id_hr;
@@ -16,35 +17,45 @@ public class Comer {
 		this.pessoas = pessoas;
 		this.alimento = alimento;
 	}
+
 	public Long getId_hr() {
 		return id_hr;
 	}
+
 	public void setId_hr(int id_hr) {
 		this.id_hr = (long) id_hr;
 	}
+
 	public Integer getData_hora() {
 		return data_hora;
 	}
+
 	public void setData_hora(Integer data_hora) {
 		this.data_hora = data_hora;
 	}
+
 	public ArrayList<Pessoa> getPessoas() {
 		return pessoas;
 	}
+
 	public void setPessoas(ArrayList<Pessoa> pessoas) {
 		this.pessoas = pessoas;
 	}
+
 	public ArrayList<Alimentos> getAlimento() {
 		return alimento;
 	}
+
 	public void setAlimento(ArrayList<Alimentos> alimento) {
 		this.alimento = alimento;
 	}
+
 	@Override
 	public String toString() {
 		return "Comer [id_hr=" + id_hr + ", data_hora=" + data_hora + ", pessoas=" + pessoas + ", alimento=" + alimento
 				+ "]";
 	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -55,6 +66,7 @@ public class Comer {
 		result = prime * result + ((pessoas == null) ? 0 : pessoas.hashCode());
 		return result;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -83,6 +95,5 @@ public class Comer {
 			return false;
 		return true;
 	}
-	
-	
+
 }
