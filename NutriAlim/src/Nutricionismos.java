@@ -7,14 +7,16 @@ public class Nutricionismos implements NutriAlimentos{
 		Pessoa aluno = new Pessoa();
 		if(pessoa == null || pessoa.isEmpty()) {
 			throw new CPFInvalidoException();
+		}
 		return null;
 	}
 	
 	@Override
 	public Avaliação enviar(Avaliação avaliação, Pessoa pessoa) throws UsuarioInvalidoException {
 		Avaliação aluno = new Avaliação();
-		if(pessoa == null || pessoa.isEmpty()) {
+		if(pessoa == null || Pessoa.isEmpty()) {
 			throw new UsuarioInvalidoException();
+		}
 		return null;
 	}
 	

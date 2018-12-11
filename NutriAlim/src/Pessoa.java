@@ -137,4 +137,11 @@ public class Pessoa implements Indentificavel {
 		
 	}
 
+	public static boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
 }

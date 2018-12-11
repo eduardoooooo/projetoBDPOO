@@ -16,6 +16,6 @@ public interface NutriAlimentos {
 
 	public void registrarComer(Comer comer, Alimentos alimentos)throws CodigoInvalidoException;
 
-	Pessoa regristarPessoa(Pessoa pessoa) throws UsuarioInvalidoException;
+	Pessoa regristarPessoa(Pessoa pessoa) throws UsuarioInvalidoException, CPFInvalidoException;
 
 }
