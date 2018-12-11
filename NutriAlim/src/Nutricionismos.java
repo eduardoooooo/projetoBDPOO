@@ -4,7 +4,7 @@ public class Nutricionismos implements NutriAlimentos{
 
 	@Override
 	public Pessoa regristarPessoa(Pessoa pessoa) throws  CPFInvalidoException{
-		Pessoa aluno = new Pessoa();
+		Pessoa pessoas = new Pessoa();
 		if(pessoa == null || pessoa.isEmpty()) {
 			throw new CPFInvalidoException();
 		}
@@ -13,7 +13,7 @@ public class Nutricionismos implements NutriAlimentos{
 	
 	@Override
 	public Avaliação enviar(Avaliação avaliação, Pessoa pessoa) throws UsuarioInvalidoException {
-		Avaliação aluno = new Avaliação();
+		Avaliação pessoas = new Avaliação();
 		if(pessoa == null || Pessoa.isEmpty()) {
 			throw new UsuarioInvalidoException();
 		}
@@ -53,8 +53,11 @@ public class Nutricionismos implements NutriAlimentos{
 
 	@Override
 	public void registrarComer(Comer comer, Alimentos alimentos) throws CodigoInvalidoException {
-		// TODO Auto-generated method stub
-		
+			Avaliação pessoas = new Avaliação();
+			if(comer == null || Pessoa.isEmpty()) {
+				throw new CodigoInvalidoException();
+			}
+			return;
 	}
 
 	
