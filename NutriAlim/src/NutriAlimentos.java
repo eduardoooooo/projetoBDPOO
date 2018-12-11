@@ -19,4 +19,3 @@ public interface NutriAlimentos {
 	Pessoa regristarPessoa(Pessoa pessoa) throws UsuarioInvalidoException;
 
 }
-=

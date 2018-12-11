@@ -3,20 +3,21 @@ import java.util.ArrayList;
 public class Nutricionismos implements NutriAlimentos{
 
 	@Override
-	public Pessoa regristarPessoa(Pessoa pessoa) throws  UsuarioInvalidoException{
-		Pessoa pessoa = new Pessoa();
-		if(usuario == null || Usuario.isEmpty()) {
-			throw new CodigoInvalidoException();
-		}
+	public Pessoa regristarPessoa(Pessoa pessoa) throws  CPFInvalidoException{
+		Pessoa aluno = new Pessoa();
+		if(pessoa == null || pessoa.isEmpty()) {
+			throw new CPFInvalidoException();
 		return null;
 	}
-
 	
 	@Override
 	public Avaliação enviar(Avaliação avaliação, Pessoa pessoa) throws UsuarioInvalidoException {
-		// TODO Auto-generated method stub
+		Avaliação aluno = new Avaliação();
+		if(pessoa == null || pessoa.isEmpty()) {
+			throw new UsuarioInvalidoException();
 		return null;
 	}
+	
 
 	@Override
 	public Avaliação qualificar(Avaliação avaliação, ArrayList<Avaliação> qualificar) throws UsuarioInvalidoException {
@@ -56,3 +57,4 @@ public class Nutricionismos implements NutriAlimentos{
 
 	
 }
+
